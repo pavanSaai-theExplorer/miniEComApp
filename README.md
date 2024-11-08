@@ -1,54 +1,62 @@
 # MiniEcom Backend Application
 
-Welcome to the **MiniEcom Backend Application**! This project provides a scalable and efficient backend architecture for an eCommerce platform, built using a microservices approach with Spring Boot.
-
-## Features
-
-- **Microservices Architecture**: Independent services for **Product**, **Order**, **Inventory**, and **Notifications**.
-- **RESTful APIs**: Robust API endpoints for each service to allow easy communication and extensibility.
-- **API Gateway**: Implemented with **Spring Cloud Gateway MVC** to handle routing and ensure secure communication.
-- **Asynchronous Messaging**: Leveraging **Kafka** for improved performance and reliability of service interactions.
-- **Authentication and Authorization**: Secured using **Keycloak** for managing user roles and access.
-- **Monitoring and Analytics**: Integrated **Grafana Stack** for real-time monitoring and performance tracking.
+Welcome to the **MiniEcom Backend Application**! This project is a scalable backend solution for an eCommerce platform, structured as a microservices architecture with Spring Boot.
 
 ## Table of Contents
 
+- [Features](#features)
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Setup](#setup)
-- [Usage](#usage)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [API Endpoints](#api-endpoints)
+- [Monitoring](#monitoring)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Features
+
+- **Microservices Architecture**: Independent services for **Product**, **Order**, **Inventory**, and **Notifications** for modularity and scalability.
+- **API Gateway**: Built with **Spring Cloud Gateway MVC** for secure and efficient routing of requests.
+- **Asynchronous Messaging**: Utilizes **Kafka** for asynchronous, reliable interactions between services.
+- **Authentication and Authorization**: Secured with **Keycloak** for managing user access and roles.
+- **Monitoring and Analytics**: Integrated with **Grafana Stack** (Grafana, Prometheus, Loki) for comprehensive monitoring and analytics.
+
 ## Architecture
 
-This project uses a **microservices architecture** where each service operates independently, making the system scalable and easy to maintain. Here’s a breakdown of the main components:
+The **MiniEcom Backend Application** is designed using a microservices architecture, enabling each service to function independently for easier scaling and maintenance.
 
-1. **Product Service**: Manages product information.
-2. **Order Service**: Handles customer orders.
-3. **Inventory Service**: Tracks stock levels.
-4. **Notifications Service**: Sends notifications on events like order status updates.
+### Main Services
 
-![Architecture Diagram](path/to/your/architecture-diagram.png) <!-- Optional: Add a link to an architecture diagram image -->
+1. **Product Service**: Manages product catalog, details, and pricing.
+2. **Order Service**: Handles order creation, processing, and tracking.
+3. **Inventory Service**: Manages stock levels and product availability.
+4. **Notifications Service**: Sends notifications to users on significant events, such as order updates.
+
+![Architecture Diagram](path/to/your/architecture-diagram.png) <!-- Replace with the actual path if available -->
+
+Each service communicates via RESTful APIs and asynchronous Kafka messaging, while an API Gateway serves as a unified entry point for requests, simplifying client interactions with the system.
 
 ## Tech Stack
 
-- **Spring Boot**: For building each microservice.
-- **Spring Cloud Gateway**: For API Gateway functionality.
-- **Kafka**: As a messaging queue for asynchronous communication.
-- **Keycloak**: For authentication and authorization.
-- **Grafana Stack**: For monitoring, including Grafana, Prometheus, and Loki.
+- **Backend Framework**: Spring Boot
+- **API Gateway**: Spring Cloud Gateway
+- **Messaging Queue**: Kafka
+- **Authentication**: Keycloak
+- **Monitoring**: Grafana, Prometheus, and Loki
 
 ## Setup
 
 ### Prerequisites
 
-- **Java** 17 or above
+- **Java** 17 or higher
 - **Docker** and **Docker Compose**
 - **Maven**
-- **Kafka** (can be set up via Docker)
-- **Keycloak** (can be set up via Docker)
-- **Prometheus and Grafana** (can be set up via Docker)
+- **Kafka** (can be run via Docker)
+- **Keycloak** (can be run via Docker)
+- **Grafana and Prometheus** (can be run via Docker)
 
 ### Installation
 
